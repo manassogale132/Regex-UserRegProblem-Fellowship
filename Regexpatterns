@@ -11,12 +11,25 @@ public class Main1{
       
         
         System.out.println("1. First-Name");
-        System.out.println(Pattern.matches("[A-Za-z]{5}", "Manas"));  //First Name (First Character should be capital)
+        System.out.println(Pattern.matches("[A-Za-z]{5}", "Manas"));    //First Name (First Character should be capital)
         System.out.println(" ");
 	
 	
 	System.out.println("2. Last-Name");
         System.out.println(Pattern.matches("[A-Z]{1}[a-z]{5}", "Sogale"));    //Last Name (Last Character should be capital)
+        System.out.println(" ");
+	
+	
+	System.out.println("3. Email-IDs");
+        System.out.println(Pattern.matches("[A-Za-z.@]{1,25}", "manas.sogale@yahoo.co.in"));  //Email 1
+        
+        System.out.println(Pattern.matches("[A-Za-z.@]{1,20}", "Manas@yahoo.com"));           //Email 2
+        
+        System.out.println(Pattern.matches("[A-Za-z0-9.@-]{1,20}", "manas-100@gmail.com"));   //Email 3
+        
+        System.out.println(Pattern.matches("[A-Za-z0-9.@]{1,20}", "manaS@1.com"));            //Email 4
+        
+        System.out.println(Pattern.matches("[A-Za-z0-9.@+]{1,20}", "MANAS+81@gmail.com"));    //Email 5
         System.out.println(" ");
         
 	
