@@ -1,0 +1,17 @@
+import java.util.regex.Pattern;  
+import java.util.Scanner;  
+import java.util.regex.Matcher;    
+public class Main1{    
+	
+    public static void main(String[] args){    
+       
+        System.out.println("--Regular Expression in JAVA--");
+        System.out.println("----------------------------------------------------");
+        System.out.println(" ");
+      
+        
+        System.out.println("1. First-Name");
+        System.out.println(Pattern.matches("[A-Za-z]{5}", "Manas"));  //First Name (First Character should be capital)
+        System.out.println(" ");
+        }
+        }
