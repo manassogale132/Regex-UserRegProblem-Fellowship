@@ -13,5 +13,12 @@ public class Main1{
         System.out.println("1. First-Name");
         System.out.println(Pattern.matches("[A-Za-z]{5}", "Manas"));  //First Name (First Character should be capital)
         System.out.println(" ");
+	
+	
+	System.out.println("2. Last-Name");
+        System.out.println(Pattern.matches("[A-Z]{1}[a-z]{5}", "Sogale"));    //Last Name (Last Character should be capital)
+        System.out.println(" ");
+        
+	
         }
         }
