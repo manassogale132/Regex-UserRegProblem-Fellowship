@@ -33,5 +33,16 @@ public class Main1{
         System.out.println(" ");
         
 	
+	
+	System.out.println("4. Mobile-Numbers");
+        System.out.println(Pattern.matches("[1-9]{2}[ ][1-9]{10}", "91 9632365489"));   //Number 1
+        
+        System.out.println(Pattern.matches("[1-9]{2}[-][1-9]{10}", "91-9325621456"));   //Number 2
+        
+        System.out.println(Pattern.matches("[0-2]{3}[ ][0-9]{10}", "220 9632054034"));  //Number 3
+        System.out.println(" ");
+	
+	
+	
         }
         }
