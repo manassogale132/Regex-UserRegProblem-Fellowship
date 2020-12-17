@@ -43,10 +43,11 @@ public class Main1{
         System.out.println(" ");
 	
 	
-	
-	 
-        System.out.println("5. Passwords");
-        System.out.println(Pattern.matches("[A-Za-z0-9]{8,}[./@$#]", "jaasON@1993"));    //Password
+	System.out.println("5. Passwords");
+        System.out.println(Pattern.matches("[A-Za-z]{5}[./$#@]?[0-9]{4}", "jasON.1993"));  //Password 1
+    
+        System.out.println(Pattern.matches("[A-Za-z]{4}[./$#@]?[0-9]{4}", "ForT$1539"));  //Password 2
+        System.out.println(" ")
 	
         }
         }
