@@ -44,5 +44,9 @@ public class Main1{
 	
 	
 	
+	 
+        System.out.println("5. Passwords");
+        System.out.println(Pattern.matches("[A-Za-z0-9]{8,}[./@$#]", "jaasON@1993"));    //Password
+	
         }
         }
