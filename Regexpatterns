@@ -1,86 +1,78 @@
-import java.util.regex.Pattern;  
-import java.util.Scanner;  
-import java.util.regex.Matcher;    
-public class Main1{    
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+public class Main2 {
+
+	public static void main(String[] args) {
+		
+		Scanner scan=new Scanner(System.in);
+		Scanner scan1=new Scanner(System.in);
+		
+		String fname,lname,email,password;
+		CharSequence phonenumber;
+		
 	
-    public static void main(String[] args){    
-       
-        System.out.println("--Regular Expression in JAVA--");
-        System.out.println("----------------------------------------------------");
-        System.out.println(" ");
-      
-        
-        System.out.println("1. First-Name");
-        System.out.println(Pattern.matches("[A-Za-z]{5}", "Manas"));  //First Name (First Character should be capital)
-        System.out.println(" ");
-        
-        
-        
-        System.out.println("2. Last-Name");
-        System.out.println(Pattern.matches("[A-Z]{1}[a-z]{5}", "Sogale"));    //Last Name (Last Character should be capital)
-        System.out.println(" ");
-        
-        
-        
-        System.out.println("3. Email-IDs");
-        System.out.println(Pattern.matches("[A-Za-z.@]{1,25}", "manas.sogale@yahoo.co.in"));  //Email 1
-        
-        System.out.println(Pattern.matches("[A-Za-z.@]{1,20}", "Manas@yahoo.com"));           //Email 2
-        
-        System.out.println(Pattern.matches("[A-Za-z0-9.@-]{1,20}", "manas-100@gmail.com"));   //Email 3
-        
-        System.out.println(Pattern.matches("[A-Za-z0-9.@]{1,20}", "manaS@1.com"));            //Email 4
-        
-        System.out.println(Pattern.matches("[A-Za-z0-9.@+]{1,20}", "MANAS+81@gmail.com"));    //Email 5
-        System.out.println(" ");
-        
-        
-        
-        System.out.println("4. Mobile-Numbers");
-        System.out.println(Pattern.matches("[1-9]{2}[ ][1-9]{10}", "91 9632365489"));   //Number 1
-        
-        System.out.println(Pattern.matches("[1-9]{2}[-][1-9]{10}", "91-9325621456"));   //Number 2
-        
-        System.out.println(Pattern.matches("[0-2]{3}[ ][0-9]{10}", "220 9632054034"));  //Number 3
-        System.out.println(" ");
-        
-        
-        
-        System.out.println("5. Passwords");
-        System.out.println(Pattern.matches("[A-Za-z]{5}[./$#@]?[0-9]{4}", "jasON.1993"));  //Password 1
-        System.out.println(" ");
-    
-        System.out.println(Pattern.matches("[A-Za-z]{4}[./$#@]?[0-9]{4}", "ForT$1539"));  //Password 2
-        System.out.println(" ");
-   
-    }     
-       
-}    
+		System.out.println("--User Regristration--:");
+		System.out.println("------------------------------------------------------------");
+	
+	
+		     System.out.println(" ");
+			 System.out.println("1.First-Name"+" "+"(First letter should be capital)");
+			 fname=scan.nextLine();
+			 System.out.println(Pattern.matches("[A-Z]{1}[a-z]{1,7}", fname));
+			 
+			
+			System.out.println(" ");
+			System.out.println("2.Last-Name"+" "+"(First letter should be capital)");
+			lname=scan.nextLine();
+		    System.out.println(Pattern.matches("[A-Z]{1}[a-z]{1,7}", lname));
+		   
+		  
+		    System.out.println(" ");
+			System.out.println("3.Email-ID"+" "+"(Format : abcde@abcde.abcde)");
+			email=scan.nextLine();
+		    System.out.println(Pattern.matches("(.+)@(.+)", email));
+		    
+		 
+		    System.out.println(" ");
+			System.out.println("4.Phone-Number"+" "+"(Format : 91 xxxxxxxxxx)"); 
+			phonenumber=scan1.nextLine();
+		    System.out.println(Pattern.matches("[1-9]{2}[ ][1-9]{10}", phonenumber));
+		
+		    
+		    
+		    System.out.println(" ");
+			System.out.println("5.Password");
+			password=scan.nextLine();
+		    System.out.println(Pattern.matches("[A-Za-z0-9]{1,8}[./$#@]?", password));
+	
+			
+		}
+	}
+
+Output :
+
+--User Regristration--:
+------------------------------------------------------------
+ 
+1.First-Name (First letter should be capital)
+Manas
+true
+ 
+2.Last-Name (First letter should be capital)
+Sogale
+true
+ 
+3.Email-ID (Format : abcde@abcde.abcde)
+Manas.SoG82@gmail.com
+true
+ 
+4.Phone-Number (Format : 91 xxxxxxxxxx)
+91 9863214569
+true
+ 
+5.Password
+jasON.13
+false
 
 
-OutPut :
-
---Regular Expression in JAVA--
-----------------------------------------------------
- 
-1. First-Name
-true
- 
-2. Last-Name
-true
- 
-3. Email-IDs
-true
-true
-true
-true
-true
- 
-4. Mobile-Numbers
-true
-true
-true
- 
-5. Passwords
-true
-true
